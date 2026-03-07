@@ -141,8 +141,7 @@ DECLARE
 
             IF client_investments(i).pdate < DATE '2000-01-01' THEN
                 client_investments(i).qty := client_investments(i).qty + 150;
-            ELSIF client_investments(i).pdate < DATE '2001-01-01' THEN
-                client_investments(i).qty := client_investments(i).qty + 100;
+            ELSIF client_in stments(i).qty := client_investments(i).qty + 100;
             ELSIF client_investments(i).pdate < DATE '2002-01-01' THEN
                 client_investments(i).qty := client_investments(i).qty + 50;
             END IF;
