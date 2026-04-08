@@ -43,3 +43,18 @@ AND p.qty > 1000;
 
 -- display the updated plan
 @utlxpls.sql
+
+-- optional steps
+
+-- 1. drop an index
+-- DROP INDEX idx_client_clno_name;
+
+-- 2. check existing indexes on a table
+SELECT index_name, table_name
+FROM user_indexes
+WHERE table_name = 'CLIENT';
+
+-- 3. obtain DDL used to create indexes
+SELECT DBMS_METADATA.GET_DDL('INDEX', u.index_name)
+FROM user_indexes u
+WHERE table_name = 'CLIENT';

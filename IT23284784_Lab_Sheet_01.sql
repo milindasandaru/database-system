@@ -121,7 +121,7 @@ JOIN client c ON p.clno = c.clno
 WHERE t.exchange = 'New York'
 GROUP BY s.company, c.name, s.price;
 
---(d): Total Portfolio Value
+--(d): Total purchase Value
 SELECT c.name, SUM(p.qty * p.price) AS total_portfolio_purchase_value
 FROM client c
 JOIN purchase p ON c.clno = p.clno
